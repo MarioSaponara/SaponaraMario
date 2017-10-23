@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  ~ [y] hybris Platform
+  ~ 
+  ~ Copyright (c) 2000-2016 SAP SE
+  ~ All rights reserved.
+  ~ 
+  ~ This software is the confidential and proprietary information of SAP 
+  ~ Hybris ("Confidential Information"). You shall not disclose such 
+  ~ Confidential Information and shall use it only in accordance with the 
+  ~ terms of the license agreement you entered into with SAP Hybris.
+  -->
+<!--
+	ATTENTION: This is just an example file. You have to edit it according to your needs.
+-->
+
+<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="items.xsd">
+	
+		<relations>
+				<relation code="DoseRelation" autocreate="true" generate="true" localized="false">
+					<deployment table="Dose" typecode="20100"/>
+					<sourceElement qualifier="ingredienti" type="Ingrediente" cardinality="many" >
+					</sourceElement>
+					<targetElement qualifier="ricette" type="Ricetta" cardinality="many" >
+					</targetElement>
+				</relation>
+		</relations>
+
+		<itemtypes>
+			<itemtype code="Dose" autocreate="true" generate="true">
+			<attributes>
+				<attribute qualifier="quantita" type="java.lang.Integer">
+						<description>Quantità ingrediente per ricetta</description>
+						<modifiers optional="false" />
+						<persistence type="property" />
+					</attribute>
+				</attributes>
+					<indexes>
+						<index name="indici" unique="true">
+							<key attribute="source"/>
+							<key attribute="target"/>
+						</index>
+					</indexes>
+			</itemtype>
+			
+			<itemtype code="Ricetta" autocreate="true" generate="true">
+				<attributes>	
+				
+					<attribute qualifier="id" type="java.lang.Integer">
+						<description>Identificativo ricetta</description>
+						<modifiers optional="false" />
+						<persistence type="property" />
+					</attribute>
+				
+					<attribute qualifier="nome" type="java.lang.String">
+						<description>Nome ricetta</description>
+						<modifiers optional="false" />
+						<persistence type="property" />
+					</attribute>
+					
+					<attribute qualifier="tempoCottura" type="java.lang.Integer">
+						<description>Tempo di cottura della ricetta</description>
+						<modifiers optional="true" />
+						<persistence type="property" />
+					</attribute>
+					
+					<attribute qualifier="portata" type="java.lang.String">
+						<description>Tipo di portata della ricetta</description>
+						<modifiers optional="true" />
+						<persistence type="property" />
+					</attribute>
+					
+					<attribute qualifier="calorie" type="java.lang.Integer">
+						<description>Calorie della ricetta</description>
+						<modifiers optional="true" />
+						<persistence type="property" />
+					</attribute>
+					
+					<attribute qualifier="paeseProvenienza" type="java.lang.String">
+						<description>Edition</description>
+						<modifiers optional="true" />
+						<persistence type="property" />
+					</attribute>
+				</attributes>
+			</itemtype>
+			
+			<itemtype code="Ingredienti" autocreate="true" generate="true">
+				<attributes>	
+				
+					<attribute qualifier="nome" type="java.lang.String">
+						<description>Nome ingrediente</description>
+						<modifiers optional="false" />
+						<persistence type="property" />
+					</attribute>
+				
+					<attribute qualifier="provenienza" type="java.lang.String">
+						<description>Provenienza dell'ingrediente</description>
+						<modifiers optional="false" />
+						<persistence type="property" />
+					</attribute>
+					
+					<attribute qualifier="tipo" type="java.lang.String">
+						<description>Tipo di ingrediente</description>
+						<modifiers optional="true" />
+						<persistence type="property" />
+					</attribute>
+	
+				</attributes>
+			</itemtype>
+		</itemtypes>
+		
+		
+</items>
