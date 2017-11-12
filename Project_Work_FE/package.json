@@ -1,0 +1,13 @@
+{
+  "name": "Project_Work_FE",
+  "description": "frontend-uiip-Mario-Saponara",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "devDependencies": {}
+}

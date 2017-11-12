@@ -1,0 +1,18 @@
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #ffffff;
+  height: 500px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+.jumbotron h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+  color: #000000;
+}
+.jumbotron h3 {
+  margin: 0 0 20px;
+  color: #000000;
+}

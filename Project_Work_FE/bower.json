@@ -1,0 +1,11 @@
+{
+  "name": "Project_Work_FE",
+  "description": "frontend-uiip-Mario-Saponara",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,19 @@
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+footer .row {
+  display: flex;
+  align-items: center;
+}
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+footer ul {
+  list-style: none;
+}
+footer li img {
+  width: 40px;
+  height: 40px;
+}
